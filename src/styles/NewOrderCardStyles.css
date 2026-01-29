@@ -1,0 +1,50 @@
+.cardNew{
+    width: 22%;
+    height: 100%;
+    border-radius: 20;
+    display: flex;
+    flex-direction: column;
+    gap: 5%;
+}
+.imgHolder{
+    width: 100%;
+    height: 69%;
+    background-image: url("../assets/images/image2.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 5px;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.414);
+    display: flex;
+    justify-content: flex-end;
+    align-items: end;
+    padding: 5px;
+
+    .statusCard{
+        background-color:#000000;
+        padding:3px;
+        width:fit-content;
+        height: fit-content;
+        border-radius: 5px;
+        color: aliceblue;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+}
+.infoBottom{
+    width: 100%;
+    height: 45%;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.414);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding:3px 2px 2px 4px;
+
+    .lastLast{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        margin-top: 5%;
+    }
+}

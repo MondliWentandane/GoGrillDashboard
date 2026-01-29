@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AddMealPage = () => {
+const AddMealPage:React.FC = () => {
   return (
     <div>
       Helo Ad Meal

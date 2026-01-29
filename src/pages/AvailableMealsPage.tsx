@@ -1,6 +1,6 @@
 import React from 'react'
 
-const AvailableMealsPage = () => {
+const AvailableMealsPage:React.FC = () => {
   return (
     <div>AvailableMealsPage</div>
   )
