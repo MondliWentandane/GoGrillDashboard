@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0; /* Add this */
+  box-sizing: border-box;
+}
+
+html, body {
+  width: 100%;
+  overflow-x: hidden;
+  min-height: 100vh;
+  height: 100%; /* Add this */
+}
+
+body {
+  max-width: 100vw;
+  display: flex; /* Add this - crucial! */
+}
+
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex; /* Add this */
+}

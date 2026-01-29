@@ -1,0 +1,12 @@
+
+.mainNav{
+    background-color: yellow;
+    width: 10%; /* 10% of parent width */
+    min-height: 100vh; /* Full viewport height */
+    height: 100%; /* Takes full height of parent */
+    
+    /* Optional: Make it look better */
+    position: sticky;
+    top: 0;
+    left: 0;
+}
