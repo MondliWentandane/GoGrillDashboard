@@ -1,7 +1,7 @@
 
 .mainNav{
-    background-color: yellow;
-    width: 10%; /* 10% of parent width */
+    background-color: rgb(255, 255, 255);
+    width: 17%; /* 10% of parent width */
     min-height: 100vh; /* Full viewport height */
     height: 100%; /* Takes full height of parent */
     
@@ -9,4 +9,18 @@
     position: sticky;
     top: 0;
     left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 5%;
+    padding-bottom: 10%;
+    border-radius: 5px;
+    box-shadow: 1px 1px 3px rgb(156, 156, 156);
+}
+
+.sectOne{
+    display: flex;
+    flex-direction: column;
+    gap: 7%;
+    height: 60%;
 }

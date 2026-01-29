@@ -1,0 +1,10 @@
+.container{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    border-radius: 10px;
+    box-shadow: 3px 2px 3px rgb(184, 184, 184);
+    padding-left: 10%;
+    font-size: large;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
