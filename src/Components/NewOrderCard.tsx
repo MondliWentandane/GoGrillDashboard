@@ -17,7 +17,7 @@ const NewOrderCard:React.FC<TheProps> = ({orderNo, mealName, quantity, delivery,
   return (
     <div className='cardNew'>
         <div className='imgHolder' style={{backgroundImage:`url(${imgUrl})`}}>
-            <div className='statusCard'><p>Not Ready</p></div>
+            <div className='statusCard'><strong>Not Ready</strong></div>
         </div>
         <div className="infoBottom">
             <div>

@@ -5,6 +5,7 @@ import Dashboard from './pages/Dashboard'
 import AddMealPage from './pages/AddMealPage'
 import Navbar from './Components/Navbar'
 import AvailableMealsPage from './pages/AvailableMealsPage'
+import SettingPage from './pages/SettingPage'
 
 function App() {
 
@@ -17,6 +18,7 @@ function App() {
             <Route path='/' element={<Dashboard/>}/>
             <Route path='/mealsList' element={<AvailableMealsPage/>}/>
             <Route path='/addMealsP' element={<AddMealPage/>}/>
+            <Route path='/settingsP' element={<SettingPage/>}/>
           </Routes>
         </div>
       </div>
