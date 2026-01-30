@@ -1,18 +1,32 @@
 import React from 'react'
 import "../styles/NewOrderCardStyles.css"
 
-const NewOrderCard:React.FC = () => {
+interface TheProps{
+    orderNo: number;
+    mealName: string;
+    quantity: number;
+    delivery: boolean;
+    imgUrl: string;
+}
+
+const getOrderType = (delivery: boolean): string => {
+      return delivery ? "Delivery" : "Collection";
+    };
+
+const NewOrderCard:React.FC<TheProps> = ({orderNo, mealName, quantity, delivery, imgUrl}) => {
   return (
     <div className='cardNew'>
-        <div className='imgHolder'>
+        <div className='imgHolder' style={{backgroundImage:`url(${imgUrl})`}}>
             <div className='statusCard'><p>Not Ready</p></div>
         </div>
         <div className="infoBottom">
-            <strong style={{fontSize:"larger", color:"#fdab07"}}>23234</strong>
-            <strong style={{lineHeight:"10px"}}>UnWise Street</strong>
+            <div>
+                <strong style={{fontSize:"larger", color:"#fdab07"}}>{orderNo}</strong> <br />
+                <strong style={{lineHeight:"10px"}}>{mealName}</strong>
+            </div>
             <div className='lastLast'>
-                <strong style={{fontSize:"13px",}}>Delivery</strong>
-                <strong>X2</strong>
+                <strong style={{fontSize:"13px",}}>{getOrderType(delivery)}</strong>
+                <strong>X{quantity}</strong>
             </div>
         </div>
     </div>

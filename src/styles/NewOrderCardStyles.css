@@ -40,6 +40,7 @@
     flex-direction: column;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     padding:3px 2px 2px 4px;
+    justify-content: space-between;
 
     .lastLast{
         width: 100%;

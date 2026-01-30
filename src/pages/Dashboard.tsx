@@ -3,15 +3,16 @@ import "../styles/DashboardStyles.css"
 import NewOrderCard from '../Components/NewOrderCard';
 import ReadyOrderCard from '../Components/ReadyOrderCard';
 import GetReadyOrderCard from '../Components/GetReadyOrderCard';
+import theImg from '../assets/images/image2.png'
+import theImg2 from '../assets/images/image2.png'
+import theImg3 from '../assets/images/image2.png'
+
 const Dashboard:React.FC = () => {
   return (
     <div className='containerD'>
       <div className='leftBlock'>
         <div className='horizontCards'>
-          <NewOrderCard/>
-          <NewOrderCard/>
-          <NewOrderCard/>
-          <NewOrderCard/>
+          <NewOrderCard orderNo={24342} mealName='Unwise Street' delivery={true} quantity={3} imgUrl={theImg}/>
 
         </div>
         <div className='verticalCards'>
@@ -21,8 +22,6 @@ const Dashboard:React.FC = () => {
             </div>
             <div className='vSlider'>
               <ReadyOrderCard/>
-              <ReadyOrderCard/>
-              <ReadyOrderCard/>
             </div>
           </div>
           <div className="vRight">
@@ -30,8 +29,6 @@ const Dashboard:React.FC = () => {
               <strong>Ready for Collection</strong>
             </div>
             <div className='vSlider'>
-              <ReadyOrderCard/>
-              <ReadyOrderCard/>
               <ReadyOrderCard/>
             </div>
           </div>
@@ -42,8 +39,6 @@ const Dashboard:React.FC = () => {
               <strong>Getting Ready</strong>
         </div>
         <div className='vSliderTwo'>
-          <GetReadyOrderCard/>
-          <GetReadyOrderCard/>
           <GetReadyOrderCard/>
         </div>
       </div>
