@@ -9,7 +9,6 @@ box-shadow: 2px 2px 3px rgb(9, 9, 9);
 padding: 2.5%;
 }
 .mealImg{
-    background-image: url("../assets//images/image3.png");
     width: 36%;
     height: 100%;
     background-position: center;
