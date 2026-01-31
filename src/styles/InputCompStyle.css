@@ -1,0 +1,8 @@
+.theField{
+    width: 85%;
+    height: 60%;
+    border-radius: 10px;
+    border-width: 0px;
+    padding-left: 7px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

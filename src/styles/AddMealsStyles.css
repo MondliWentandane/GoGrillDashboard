@@ -1,10 +1,38 @@
 .addContainer{
     width: 80%;
     height: 80%;
-    background-color: rgb(228, 215, 140);
+    background-color: rgba(250, 183, 59, 0.216);
     border-radius: 20px;
     padding: 2%;
     display: flex;
     flex-direction: row;
     gap: 5%;
+}
+.descrField{
+    border-radius: 10px;
+    width: 85%;
+    margin-top: 2%;
+    font-size: larger;
+    border-width: 0px;
+    padding: 7px;
+
+}
+#buttonS{
+    padding: 5px;
+    width: 100px;
+    border-radius: 10px;
+    
+    font-weight: bold;
+}
+
+.theCnl{
+    background: transparent;
+    border-color: sandybrown;
+    color: black;
+}
+.theAdd{
+    background-color: sandybrown;
+    color: aliceblue;
+    border-color: sandybrown;
+
 }
