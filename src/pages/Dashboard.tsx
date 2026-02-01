@@ -10,7 +10,7 @@ import type { OrderStatus, UIOrder } from '../types/restaurant.types';
 
 const Dashboard: React.FC = () => {
   const dispatch = useAppDispatch();
-  const { newOrders, preparingOrders, readyOrders, isLoading } = useAppSelector((state) => state.orders);
+  const { newOrders, preparingOrders, readyOrders, isLoading } = useAppSelector((state) => state.orders); // Removed unused 'orders'
 
   useEffect(() => {
     dispatch(fetchOrders());
@@ -24,12 +24,12 @@ const Dashboard: React.FC = () => {
     }
   };
 
-  // Filter orders by status
-  const pendingOrders = newOrders.filter(order => order.status === 'pending');
-  const preparingOrdersList = preparingOrders.filter(order => 
+  // Filter orders by status - Use the already categorized arrays from state
+  const pendingOrders = newOrders.filter((order: UIOrder) => order.status === 'pending');
+  const preparingOrdersList = preparingOrders.filter((order: UIOrder) => 
     order.status === 'confirmed' || order.status === 'preparing'
   );
-  const readyOrdersList = readyOrders.filter(order => 
+  const readyOrdersList = readyOrders.filter((order: UIOrder) => 
     order.status === 'ready'
   );
 
@@ -67,9 +67,9 @@ const Dashboard: React.FC = () => {
               <strong>Ready for Collection</strong>
             </div>
             <div className='vSlider'>
-              {readyOrdersList.filter(order => order.deliveryType === 'pickup').length > 0 ? (
+              {readyOrdersList.filter((order: UIOrder) => order.deliveryType === 'pickup').length > 0 ? (
                 readyOrdersList
-                  .filter(order => order.deliveryType === 'pickup')
+                  .filter((order: UIOrder) => order.deliveryType === 'pickup')
                   .map((order: UIOrder) => (
                     <ReadyOrderCard 
                       key={order.id}
@@ -89,9 +89,9 @@ const Dashboard: React.FC = () => {
               <strong>Ready for Delivery</strong>
             </div>
             <div className='vSlider'>
-              {readyOrdersList.filter(order => order.deliveryType === 'delivery').length > 0 ? (
+              {readyOrdersList.filter((order: UIOrder) => order.deliveryType === 'delivery').length > 0 ? (
                 readyOrdersList
-                  .filter(order => order.deliveryType === 'delivery')
+                  .filter((order: UIOrder) => order.deliveryType === 'delivery')
                   .map((order: UIOrder) => (
                     <ReadyOrderCard 
                       key={order.id}

@@ -1,5 +1,7 @@
-// store/store.ts - UPDATED AGAIN
+// store/store.ts - COMPLETE CORRECT VERSION
 import { configureStore } from '@reduxjs/toolkit';
+
+// IMPORT REDUCERS - Make sure these paths are correct
 import authReducer from './slices/authSlice';
 import ordersReducer from './slices/ordersSlice';
 import mealsReducer from './slices/mealsSlice';
@@ -18,5 +20,6 @@ export const store = configureStore({
     }),
 });
 
+// Export types for TypeScript
 export type RootState = ReturnType<typeof store.getState>;
 export type AppDispatch = typeof store.dispatch;

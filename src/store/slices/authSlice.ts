@@ -1,6 +1,6 @@
-// store/slices/authSlice.ts
-import { createSlice, createAsyncThunk,type PayloadAction } from '@reduxjs/toolkit';
-import {type AuthState } from '../../types/restaurant.types';
+// store/slices/authSlice.ts - VERIFY THIS
+import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
+import { type AuthState } from '../../types/restaurant.types';
 import { account } from '../../services/appwriteService';
 
 const initialState: AuthState = {
@@ -81,4 +81,4 @@ const authSlice = createSlice({
 });
 
 export const { clearError } = authSlice.actions;
-export default authSlice.reducer;
+export default authSlice.reducer; // <-- MAKE SURE THIS LINE IS PRESENT

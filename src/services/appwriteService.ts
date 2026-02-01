@@ -1,5 +1,5 @@
-// services/appwriteService.ts - FIXED VERSION
-import { Client, Databases, Query, ID } from 'appwrite';
+// services/appwriteService.ts - FIXED FOR COLLECTIONS API
+import { Client, Account, Databases, Query, ID } from 'appwrite';
 
 // Server-side client with API key
 const client = new Client()
@@ -10,6 +10,7 @@ const client = new Client()
 client.headers['X-Appwrite-Key'] = 'standard_c1cbafa06829a9025f6261ad8f0dda7c54c45637b7faaf1ba185f4603f4b5b6088ba35edcb9908491b35fdb18472dca527d7b49652f33fdcad3767bee8104b47c23979e81b849630eba4f46e38e5acdefa50e5c8f26d3aa9d5d954b215b7e3f3425b7cdfab6ababd2398578a057eefc498482517ce1258eded3be9473636dd63';
 
 export const databases = new Databases(client);
+export const account = new Account(client);
 export { ID, Query };
 
 const DATABASE_ID = 'restaurant_db';

@@ -1,4 +1,4 @@
-// store/slices/mealsSlice.ts - COMPLETE FIXED VERSION
+// store/slices/mealsSlice.ts - COMPLETE FIXED VERSION (remove unused setSelectedCategory)
 import { createSlice, createAsyncThunk, type PayloadAction } from '@reduxjs/toolkit';
 import { type UIMeal } from '../../types/restaurant.types';
 import ApiService from '../../services/appwriteService';
@@ -83,7 +83,7 @@ export const updateMeal = createAsyncThunk(
   }
 );
 
-export const deleteMeal = createAsyncThunk(  // <-- ADD THIS EXPORT
+export const deleteMeal = createAsyncThunk(
   'meals/deleteMeal',
   async (mealId: string, { rejectWithValue }) => {
     try {
@@ -99,9 +99,7 @@ const mealsSlice = createSlice({
   name: 'meals',
   initialState,
   reducers: {
-    setSelectedCategory: (state, action: PayloadAction<string | null>) => {
-      // Handle category selection if needed
-    },
+    // Remove unused setSelectedCategory and only keep clearError
     clearError: (state) => {
       state.error = null;
     },
@@ -151,5 +149,6 @@ const mealsSlice = createSlice({
   },
 });
 
-export const { setSelectedCategory, clearError } = mealsSlice.actions;
+// Export only clearError since setSelectedCategory was unused
+export const { clearError } = mealsSlice.actions;
 export default mealsSlice.reducer;
